@@ -1,0 +1,20 @@
+# Visual Studio/Visual Studio Code
+.vscode/
+bin/
+obj/
+*.user
+*.suo
+
+# Entity Framework Migrations
+Migrations/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS-generated files
+.DS_Store
+Thumbs.db

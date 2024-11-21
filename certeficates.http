@@ -1,0 +1,83 @@
+# Base URL
+@baseUrl = http://localhost:5017/api
+
+### 1. Get All Products
+GET {{baseUrl}}/products
+Accept: application/json
+
+### 2. Get Product by ID
+# Replace {id} with the actual Product ID
+GET {{baseUrl}}/products/{id}
+Accept: application/json
+
+### 3. Create a New Product
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+{
+    "name": "SampleProduct",
+    "price": 29.99,
+    "status": 1
+  }
+}
+
+### 4. Update a Product by ID
+# Replace {id} with the actual Product ID
+PUT {{baseUrl}}/products/{id}
+Content-Type: application/json
+
+{
+  "name": "Updated Product Name",
+  "price": 39.99,
+  "status": "ValidEnumValue" // replace with a valid value from EProductStatus
+}
+
+### 5. Delete a Product by ID
+# Replace {id} with the actual Product ID
+DELETE {{baseUrl}}/products/{id}
+
+### 6. Get All Product Details for a Product
+# Replace {id} with the actual Product ID
+GET {{baseUrl}}/products/{id}/details
+Accept: application/json
+
+### 7. Create Product Details for a Product
+# Replace {id} with the actual Product ID
+POST {{baseUrl}}/products/{id}/details
+Content-Type: application/json
+
+{
+  "description": "Sample product description",
+  "color": "Blue",
+  "material": "Plastic",
+  "weight": 1.2,
+  "quantityInStock": 10,
+  "manufactureDate": "2023-11-01T00:00:00Z",
+  "expiryDate": "2024-11-01T00:00:00Z",
+  "size": "M",
+  "manufacturer": "Sample Manufacturer",
+  "countryOfOrigin": "USA"
+}
+
+### 8. Update Product Details for a Product
+# Replace {id} with the actual Product ID
+PUT {{baseUrl}}/products/{id}/details
+Content-Type: application/json
+
+{
+  "description": "Updated product description",
+  "color": "Red",
+  "material": "Metal",
+  "weight": 1.5,
+  "quantityInStock": 20,
+  "manufactureDate": "2023-10-01T00:00:00Z",
+  "expiryDate": "2024-12-01T00:00:00Z",
+  "size": "L",
+  "manufacturer": "Updated Manufacturer",
+  "countryOfOrigin": "Germany"
+}
+
+### 9. Delete Product Details for a Product
+# Replace {id} with the actual Product ID
+DELETE {{baseUrl}}/products/{id}/details
